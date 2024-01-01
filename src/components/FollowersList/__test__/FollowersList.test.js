@@ -12,6 +12,24 @@ const MockFollowersList = () => {
 };
 
 describe("FollowersList", () => {
+
+    beforeEach(() => {
+        console.log("RUNNING BEFORE EACH TEST");
+    });
+
+    beforeAll(() => {
+        console.log("RAN ONCE BEFORE ALL TESTS");
+    });
+
+    afterEach(() => {
+        console.log("RUNNING AFTER EACH TEST");
+    });
+
+    afterAll(() => {
+        console.log("RAN ONCE AFTER ALL TESTS");
+
+    })
+
     it("should fetch followers data", async () => {
         render(<MockFollowersList />);
         const followerDivElement = await screen.findByTestId("follower-item-0");
